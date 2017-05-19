@@ -109,6 +109,7 @@ class HireSystem(object):
             print '--------'
             print u"%s: %s 薪水： %s"%(coder.job, coder.name, coder.salary)
             if keyboard.confirm():
+                self.avaliable_coders.append(coder)
                 self.coders.pop(self.coders.index(coder))
                 print u"%s退出了你的团队。"%(coder.name)
             if len(self.coders) < self.min_coders:
